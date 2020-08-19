@@ -1,0 +1,25 @@
+#Tried to record log of hops test run  
+
+___
+##Script
+
+    (base) [yshichiz@elwood000 yshichiz]$ cat typescript
+    Script started on 2020-08-19 12:22:30+09:00 [TERM="screen" TTY="/dev/pts/59" COLUMNS="119" LINES="32"]
+    (base) [yshichiz@elwood000 yshichiz]$ conda activate hops
+    (hops) [yshichiz@elwood000 yshichiz]$ sbatch hopsrun.sh
+    Submitted batch job 175080
+    (hops) [yshichiz@elwood000 yshichiz]$ cd Downloads/
+    (hops) [yshichiz@elwood000 Downloads]$ cd hopsoutput/
+    (hops) [yshichiz@elwood000 hopsoutput]$ ls
+    hops.log  hops.log.lck  malt  maltExtract
+    (hops) [yshichiz@elwood000 hopsoutput]$ less hops.log
+    (hops) [yshichiz@elwood000 hopsoutput]$
+    (hops) [yshichiz@elwood000 hopsoutput]$ exit
+    Script done on 2020-08-19 12:52:10+09:00 [COMMAND_EXIT_CODE="0"]  
+    
+    ___
+    ##Slurm setting
+    
+    elwood 000 sbatch 
+    
+     
