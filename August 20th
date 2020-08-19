@@ -1,0 +1,10 @@
+#To Do
+
+-copy config and put it to the same directry with imput and output files
+
+-take records of imput, output, log and command 
+
+- `qlogin -q large.q` log into a different node
+- config file edit "useSlurm=0"
+- Check Malt and MatlExtract routinely *check Malt execuatble command and log*
+
