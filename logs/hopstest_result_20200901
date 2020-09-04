@@ -1,0 +1,30 @@
+# Edited the config file to specify java for the location of MaltExtract
+
+## Environment
+qlogin -q large.q
+conda (hops)
+
+## hops1configFile
+```html:titlehops1configFile.txt
+pathToMaltExtract=/usr/bin/java -jar /home/yshichiz/miniconda3/envs/hops/share/hops-0.34-0/MaltExtract1.7.jar
+```
+
+## hopsoutput0901/hops.log
+```html:
+INFO: All Parameters:
+ -i /data2/yshichiz/Downloads/test_data/hops_test_reads.fastq
+-o /data2/yshichiz/Downloads/hopsoutput0901/
+--configFile /data2/yshichiz/Downloads/hops1configFile.txt
+-m ALL
+```
+```Sep 01, 2020 4:08:09 PM ProcessManagement.ProcessExecutor run
+INFO: /usr/bin/java -jar /home/yshichiz/miniconda3/envs/hops/share/hops-0.34-0/MaltExtract1.7.jar -Xmx300G --filter de$
+Sep 01, 2020 4:08:09 PM ProcessManagement.ProcessExecutor run
+INFO: /usr/bin/stdbuf: failed to run command '/usr/bin/java -jar /home/yshichiz/miniconda3/envs/hops/share/hops-0.34-0$
+Sep 01, 2020 4:08:09 PM ProcessManagement.ProcessExecutor run
+INFO: Process Exited with status: 127
+```
+
+## Other output
+- /malt: hops_test_reads.rma6
+- /maltExtract: empty directory
