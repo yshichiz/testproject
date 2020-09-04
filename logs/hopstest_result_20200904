@@ -1,0 +1,295 @@
+# Edited the config file to set useSlurm=0
+
+## Environment
+qlogin -q large.q
+conda (hops)
+
+## hops1configFile
+```####################
+# SLURM PARAMETERS #
+####################
+useSlurm=0
+```
+
+## hopsoutput0904_1/hops.log
+```html:
+
+Sep 04, 2020 3:00:54 PM HOPS_Main main
+INFO: All Parameters:
+ -i /data2/yshichiz/Downloads/test_data/hops_test_reads.fastq
+-o /data2/yshichiz/Downloads/hopsoutput0904_1/
+--configFile /data2/yshichiz/Downloads/hops1configFile.txt
+-m ALL
+```
+```
+Sep 04, 2020 3:00:54 PM HOPS_Main main
+INFO: Process Config File
+Sep 04, 2020 3:00:54 PM Utility.ParameterProcessor processMALTParameters
+INFO: Using default min Percent ID for LCA of 90
+Sep 04, 2020 3:00:54 PM Utility.ParameterProcessor processMALTParameters
+INFO: Using MALT with default of 32 threads
+Sep 04, 2020 3:00:54 PM Utility.ParameterProcessor processMALTParameters
+INFO: Set Maximum Memory for Malt to default value of 650 GB
+Sep 04, 2020 3:00:54 PM Utility.ParameterProcessor processMALTExtractParameters
+INFO: Use default top value of 0.01
+Sep 04, 2020 3:00:54 PM Utility.ParameterProcessor processMALTExtractParameters
+INFO: Set maximum Memory for MaltExtact to 300 GB
+Sep 04, 2020 3:00:54 PM Utility.ParameterProcessor processMALTExtractParameters
+INFO: Set Partition for MaltExtract to medium
+Sep 04, 2020 3:00:54 PM Utility.ParameterProcessor processPostProcessingParameters
+INFO: Using short Parition for Postprocessing
+Sep 04, 2020 3:00:54 PM Utility.ParameterProcessor processPostProcessingParameters
+INFO: Set wallTime to 1:00:00
+Sep 04, 2020 3:00:54 PM Utility.ParameterProcessor processPostProcessingParameters
+INFO: Set strict damage to false
+Sep 04, 2020 3:00:54 PM Utility.ParameterProcessor processPostProcessingParameters
+INFO: Set display all to false
+Sep 04, 2020 3:00:54 PM HOPS_Main main
+INFO: Run Mode ALL
+Sep 04, 2020 3:00:54 PM ProcessManagement.ProcessExecutor run
+INFO: /home/yshichiz/miniconda3/envs/hops/share/hops-0.34-0/malt-run -J-Xmx650G -d /data2/yshichiz/Downloads/MaltDB -i /data2/yshichiz/Downloads/test_data/hops_test_reads.fastq -o /data2/yshichiz/Downloads/hopsoutput0904_1/malt -m BlastN -at SemiGlobal --memoryMode load -t 32 -sup 1 -mq 100 -top 1 -mpi 90.0 -id 90.0 -v --replicateQueryCache ""
+Sep 04, 2020 3:00:56 PM ProcessManagement.ProcessExecutor run
+INFO: MaltRun - Aligns sequences using MALT (MEGAN alignment tool)
+Sep 04, 2020 3:00:56 PM ProcessManagement.ProcessExecutor run
+INFO: Options:
+Sep 04, 2020 3:00:56 PM ProcessManagement.ProcessExecutor run
+INFO: Mode:
+Sep 04, 2020 3:00:56 PM ProcessManagement.ProcessExecutor run
+INFO: 	--mode: BlastN
+Sep 04, 2020 3:00:56 PM ProcessManagement.ProcessExecutor run
+INFO: 	--alignmentType: SemiGlobal
+Sep 04, 2020 3:00:56 PM ProcessManagement.ProcessExecutor run
+INFO: Input:
+Sep 04, 2020 3:00:56 PM ProcessManagement.ProcessExecutor run
+INFO: 	--inFile: /data2/yshichiz/Downloads/test_data/hops_test_reads.fastq
+Sep 04, 2020 3:00:56 PM ProcessManagement.ProcessExecutor run
+INFO: 	--index: /data2/yshichiz/Downloads/MaltDB
+Sep 04, 2020 3:00:56 PM ProcessManagement.ProcessExecutor run
+INFO: Output:
+Sep 04, 2020 3:00:56 PM ProcessManagement.ProcessExecutor run
+INFO: 	--output: /data2/yshichiz/Downloads/hopsoutput0904_1/malt
+Sep 04, 2020 3:00:56 PM ProcessManagement.ProcessExecutor run
+INFO: 	--includeUnaligned: false
+Sep 04, 2020 3:00:56 PM ProcessManagement.ProcessExecutor run
+INFO: 	--samSoftClip: false
+Sep 04, 2020 3:00:56 PM ProcessManagement.ProcessExecutor run
+INFO: 	--sparseSAM: false
+Sep 04, 2020 3:00:56 PM ProcessManagement.ProcessExecutor run
+INFO: Performance:
+Sep 04, 2020 3:00:56 PM ProcessManagement.ProcessExecutor run
+INFO: 	--numThreads: 32
+Sep 04, 2020 3:00:56 PM ProcessManagement.ProcessExecutor run
+INFO: 	--memoryMode: load
+Sep 04, 2020 3:00:56 PM ProcessManagement.ProcessExecutor run
+INFO: 	--maxTables: 0
+Sep 04, 2020 3:00:56 PM ProcessManagement.ProcessExecutor run
+INFO: 	--replicateQueryCache: false
+Sep 04, 2020 3:00:56 PM ProcessManagement.ProcessExecutor run
+INFO: Filter:
+Sep 04, 2020 3:00:56 PM ProcessManagement.ProcessExecutor run
+INFO: 	--minBitScore: 50.0
+Sep 04, 2020 3:00:56 PM ProcessManagement.ProcessExecutor run
+INFO: 	--maxExpected: 1.0
+Sep 04, 2020 3:00:56 PM ProcessManagement.ProcessExecutor run
+INFO: 	--minPercentIdentity: 90.0
+Sep 04, 2020 3:00:56 PM ProcessManagement.ProcessExecutor run
+INFO: 	--maxAlignmentsPerQuery: 100
+Sep 04, 2020 3:00:56 PM ProcessManagement.ProcessExecutor run
+INFO: 	--maxAlignmentsPerRef: 1
+Sep 04, 2020 3:00:56 PM ProcessManagement.ProcessExecutor run
+INFO: BlastN parameters:
+Sep 04, 2020 3:00:56 PM ProcessManagement.ProcessExecutor run
+INFO: 	--matchScore: 2
+Sep 04, 2020 3:00:56 PM ProcessManagement.ProcessExecutor run
+INFO: 	--mismatchScore: -3
+Sep 04, 2020 3:00:56 PM ProcessManagement.ProcessExecutor run
+INFO: 	--setLambda: 0.625
+Sep 04, 2020 3:00:56 PM ProcessManagement.ProcessExecutor run
+INFO: 	--setK: 0.41
+Sep 04, 2020 3:00:56 PM ProcessManagement.ProcessExecutor run
+INFO: DNA query parameters:
+Sep 04, 2020 3:00:56 PM ProcessManagement.ProcessExecutor run
+INFO: 	--forwardOnly: false
+Sep 04, 2020 3:00:56 PM ProcessManagement.ProcessExecutor run
+INFO: 	--reverseOnly: false
+Sep 04, 2020 3:00:56 PM ProcessManagement.ProcessExecutor run
+INFO: LCA parameters:
+Sep 04, 2020 3:00:56 PM ProcessManagement.ProcessExecutor run
+INFO: 	--topPercent: 1.0
+Sep 04, 2020 3:00:56 PM ProcessManagement.ProcessExecutor run
+INFO: 	--minSupportPercent: 0.001
+Sep 04, 2020 3:00:56 PM ProcessManagement.ProcessExecutor run
+INFO: 	--minSupport: 1
+Sep 04, 2020 3:00:56 PM ProcessManagement.ProcessExecutor run
+INFO: 	(--minSupportPercent: overridden, set to 0)
+Sep 04, 2020 3:00:56 PM ProcessManagement.ProcessExecutor run
+INFO: 	--minPercentIdentityLCA: 90.0
+Sep 04, 2020 3:00:56 PM ProcessManagement.ProcessExecutor run
+INFO: 	--useMinPercentIdentityFilterLCA: false
+Sep 04, 2020 3:00:56 PM ProcessManagement.ProcessExecutor run
+INFO: 	--weightedLCA: false
+Sep 04, 2020 3:00:56 PM ProcessManagement.ProcessExecutor run
+INFO: 	--magnitudes: false
+Sep 04, 2020 3:00:56 PM ProcessManagement.ProcessExecutor run
+INFO: Heuristics:
+Sep 04, 2020 3:00:56 PM ProcessManagement.ProcessExecutor run
+INFO: 	--maxSeedsPerFrame: 100
+Sep 04, 2020 3:00:56 PM ProcessManagement.ProcessExecutor run
+INFO: 	--maxSeedsPerRef: 20
+Sep 04, 2020 3:00:56 PM ProcessManagement.ProcessExecutor run
+INFO: 	--seedShift: 1
+Sep 04, 2020 3:00:56 PM ProcessManagement.ProcessExecutor run
+INFO: Banded alignment parameters:
+Sep 04, 2020 3:00:56 PM ProcessManagement.ProcessExecutor run
+INFO: 	--gapOpen: 7
+Sep 04, 2020 3:00:56 PM ProcessManagement.ProcessExecutor run
+INFO: 	--gapExtend: 3
+Sep 04, 2020 3:00:56 PM ProcessManagement.ProcessExecutor run
+INFO: 	--band: 4
+Sep 04, 2020 3:00:56 PM ProcessManagement.ProcessExecutor run
+INFO: Other:
+Sep 04, 2020 3:00:56 PM ProcessManagement.ProcessExecutor run
+INFO: 	--replicateQueryCacheBits: 20
+Sep 04, 2020 3:00:56 PM ProcessManagement.ProcessExecutor run
+INFO: 	--xPart: false
+Sep 04, 2020 3:00:56 PM ProcessManagement.ProcessExecutor run
+INFO: 	--verbose: true
+Sep 04, 2020 3:00:56 PM ProcessManagement.ProcessExecutor run
+INFO: Version   MALT (version 0.4.1, built 24 May 2018)
+Sep 04, 2020 3:00:56 PM ProcessManagement.ProcessExecutor run
+INFO: Copyright (C) 2018 Daniel H. Huson. This program comes with ABSOLUTELY NO WARRANTY.
+Sep 04, 2020 3:00:56 PM ProcessManagement.ProcessExecutor run
+INFO: --- LOADING ---:
+Sep 04, 2020 3:00:56 PM ProcessManagement.ProcessExecutor run
+INFO: Reading file: /data2/yshichiz/Downloads/MaltDB/ref.idx
+Sep 04, 2020 3:00:56 PM ProcessManagement.ProcessExecutor run
+INFO: 10% 20% 30% 40% 50% 60% 70% 80% 90% 100% (0.1s)
+Sep 04, 2020 3:01:16 PM ProcessManagement.ProcessExecutor run
+INFO: Reading file: /data2/yshichiz/Downloads/MaltDB/ref.db
+Sep 04, 2020 3:07:51 PM ProcessManagement.ProcessExecutor run
+INFO: 10% 20% 30% 40% 50% 60% 70% 80% 90% 100% (395.2s)
+Sep 04, 2020 3:07:51 PM ProcessManagement.ProcessExecutor run
+INFO: 100% (0.0s)
+Sep 04, 2020 3:07:51 PM ProcessManagement.ProcessExecutor run
+INFO: Number of sequences:       101,428
+Sep 04, 2020 3:07:51 PM ProcessManagement.ProcessExecutor run
+INFO: Number of letters:  39,386,950,494
+Sep 04, 2020 3:07:51 PM ProcessManagement.ProcessExecutor run
+INFO: LOADING table (0) ...
+Sep 04, 2020 3:07:51 PM ProcessManagement.ProcessExecutor run
+INFO: Reading file: /data2/yshichiz/Downloads/MaltDB/index0.idx
+Sep 04, 2020 3:07:51 PM ProcessManagement.ProcessExecutor run
+INFO: Reference sequence type: DNA
+Sep 04, 2020 3:07:51 PM ProcessManagement.ProcessExecutor run
+INFO: Index was built using stepSize=4
+Sep 04, 2020 3:07:51 PM ProcessManagement.ProcessExecutor run
+INFO: 100% (0.0s)
+Sep 04, 2020 3:08:03 PM ProcessManagement.ProcessExecutor run
+INFO: Reading file: /data2/yshichiz/Downloads/MaltDB/table0.idx
+Sep 04, 2020 3:09:50 PM ProcessManagement.ProcessExecutor run
+INFO: 10% 20% 30% 40% 50% 60% 70% 80% 90% 100% (106.5s)
+Sep 04, 2020 3:10:47 PM ProcessManagement.ProcessExecutor run
+INFO: Reading file: /data2/yshichiz/Downloads/MaltDB/table0.db
+Sep 04, 2020 3:17:29 PM ProcessManagement.ProcessExecutor run
+INFO: 10% 20% 30% 40% 50% 60% 70% 80% 90% 100% (402.1s)
+Sep 04, 2020 3:17:29 PM ProcessManagement.ProcessExecutor run
+INFO: Table size:  9,789,675,235
+Sep 04, 2020 3:17:37 PM ProcessManagement.ProcessExecutor run
+INFO: Loading ncbi.map: 1,703,606
+Sep 04, 2020 3:17:46 PM ProcessManagement.ProcessExecutor run
+INFO: Loading ncbi.tre: 1,703,609
+Sep 04, 2020 3:17:46 PM ProcessManagement.ProcessExecutor run
+INFO: Reading file: /data2/yshichiz/Downloads/MaltDB/taxonomy.idx
+Sep 04, 2020 3:17:46 PM ProcessManagement.ProcessExecutor run
+INFO: 10% 20% 30% 40% 50% 60% 70% 80% 90% 100% (0.1s)
+Sep 04, 2020 3:17:46 PM ProcessManagement.ProcessExecutor run
+INFO: --- ALIGNING ---:
+Sep 04, 2020 3:17:46 PM ProcessManagement.ProcessExecutor run
+INFO: +++++ Aligning file: /data2/yshichiz/Downloads/test_data/hops_test_reads.fastq
+Sep 04, 2020 3:17:46 PM ProcessManagement.ProcessExecutor run
+INFO: Starting file: /data2/yshichiz/Downloads/hopsoutput0904_1/malt/hops_test_reads.rma6
+Sep 04, 2020 3:19:15 PM ProcessManagement.ProcessExecutor run
+INFO: 10% 20% 30% 40% 50% 60% 70% 80% 90% 100% (89.7s)
+Sep 04, 2020 3:19:15 PM ProcessManagement.ProcessExecutor run
+INFO: Finishing file: /data2/yshichiz/Downloads/hopsoutput0904_1/malt/hops_test_reads.rma6
+Sep 04, 2020 3:19:15 PM ProcessManagement.ProcessExecutor run
+INFO: Loading MEGAN File: hops_test_reads.rma6
+Sep 04, 2020 3:19:15 PM ProcessManagement.ProcessExecutor run
+INFO: Binning reads: Initializing...
+Sep 04, 2020 3:19:15 PM ProcessManagement.ProcessExecutor run
+INFO: Initializing binning...
+Sep 04, 2020 3:19:15 PM ProcessManagement.ProcessExecutor run
+INFO: Using 'Naive LCA' algorithm (80.0 %) for binning: Taxonomy
+Sep 04, 2020 3:19:16 PM ProcessManagement.ProcessExecutor run
+INFO: Binning reads...
+Sep 04, 2020 3:19:16 PM ProcessManagement.ProcessExecutor run
+INFO: Binning reads: Analyzing alignments
+Sep 04, 2020 3:19:17 PM ProcessManagement.ProcessExecutor run
+INFO: Total reads:               93
+Sep 04, 2020 3:19:17 PM ProcessManagement.ProcessExecutor run
+INFO: With hits:                  93
+Sep 04, 2020 3:19:17 PM ProcessManagement.ProcessExecutor run
+INFO: Alignments:              4,769
+Sep 04, 2020 3:19:17 PM ProcessManagement.ProcessExecutor run
+INFO: Assig. Taxonomy:            93
+Sep 04, 2020 3:19:17 PM ProcessManagement.ProcessExecutor run
+INFO: Binning reads: Applying min-support & disabled filter to Taxonomy...
+Sep 04, 2020 3:19:17 PM ProcessManagement.ProcessExecutor run
+INFO: Min-supp. changes:           0
+Sep 04, 2020 3:19:17 PM ProcessManagement.ProcessExecutor run
+INFO: Binning reads: Writing classification tables
+Sep 04, 2020 3:19:17 PM ProcessManagement.ProcessExecutor run
+INFO: Numb. Tax. classes:          6
+Sep 04, 2020 3:19:17 PM ProcessManagement.ProcessExecutor run
+INFO: Binning reads: Syncing
+Sep 04, 2020 3:19:17 PM ProcessManagement.ProcessExecutor run
+INFO: Class. Taxonomy:             6
+Sep 04, 2020 3:19:17 PM ProcessManagement.ProcessExecutor run
+INFO: Analysis written to file: /data2/yshichiz/Downloads/hopsoutput0904_1/malt/hops_test_reads.rma6
+Sep 04, 2020 3:19:17 PM ProcessManagement.ProcessExecutor run
+INFO: Num. of queries:         93
+Sep 04, 2020 3:19:17 PM ProcessManagement.ProcessExecutor run
+INFO: Aligned queries:         93
+Sep 04, 2020 3:19:17 PM ProcessManagement.ProcessExecutor run
+INFO: Num. alignments:       4769
+Sep 04, 2020 3:19:17 PM ProcessManagement.ProcessExecutor run
+INFO: Total time:  1101s
+Sep 04, 2020 3:19:17 PM ProcessManagement.ProcessExecutor run
+INFO: Peak memory: 174.6 of 620.4G
+Sep 04, 2020 3:19:38 PM ProcessManagement.ProcessExecutor run
+INFO: Process Exited with status: 0
+Sep 04, 2020 3:19:38 PM ProcessManagement.ProcessExecutor run
+INFO: /home/yshichiz/miniconda3/envs/hops/share/hops-0.34-0/MaltExtract1.7.jar -Xmx300G --filter def_anc -i /data2/yshichiz/Downloads/hopsoutput0904_1/malt/ -o /data2/yshichiz/Downloads/hopsoutput0904_1/maltExtract/ -p 20 -t /data2/yshichiz/Downloads/test_data/default_list.txt --resources /data2/yshichiz/Downloads/test_data/resources/ --top 0.01 --meganSummary
+Sep 04, 2020 3:19:38 PM ProcessManagement.ProcessExecutor run
+INFO: /home/yshichiz/miniconda3/envs/hops/share/hops-0.34-0/MaltExtract1.7.jar: /home/yshichiz/miniconda3/envs/hops/share/hops-0.34-0/MaltExtract1.7.jar: cannot execute binary file
+Sep 04, 2020 3:19:38 PM ProcessManagement.ProcessExecutor run
+INFO: Process Exited with status: 126
+Sep 04, 2020 3:19:38 PM ProcessManagement.ProcessExecutor run
+INFO: /home/yshichiz/miniconda3/envs/hops/bin/postprocessing.AMPS.r -m def_anc -r /data2/yshichiz/Downloads/hopsoutput0904_1/maltExtract/ -t 2 -n /data2/yshichiz/Downloads/test_data/default_list.txt
+Sep 04, 2020 3:19:39 PM ProcessManagement.ProcessExecutor run
+INFO: During startup - Warning message:
+Sep 04, 2020 3:19:39 PM ProcessManagement.ProcessExecutor run
+INFO: Setting LC_CTYPE failed, using "C"
+Sep 04, 2020 3:19:40 PM ProcessManagement.ProcessExecutor run
+INFO: Read 356 items
+Sep 04, 2020 3:19:40 PM ProcessManagement.ProcessExecutor run
+INFO: Error in file(file, "rt") : cannot open the connection
+Sep 04, 2020 3:19:40 PM ProcessManagement.ProcessExecutor run
+INFO: Calls: colnames -> is.data.frame -> as.matrix -> read.table -> file
+Sep 04, 2020 3:19:40 PM ProcessManagement.ProcessExecutor run
+INFO: In addition: Warning message:
+Sep 04, 2020 3:19:40 PM ProcessManagement.ProcessExecutor run
+INFO: In file(file, "rt") :
+Sep 04, 2020 3:19:40 PM ProcessManagement.ProcessExecutor run
+INFO:   cannot open file '/data2/yshichiz/Downloads/hopsoutput0904_1/maltExtract//default/RunSummary.txt': No such file or directory
+Sep 04, 2020 3:19:40 PM ProcessManagement.ProcessExecutor run
+INFO: Execution halted
+Sep 04, 2020 3:19:40 PM ProcessManagement.ProcessExecutor run
+INFO: Process Exited with status: 1
+Sep 04, 2020 3:19:40 PM HOPS_Main main
+INFO: HOPS run submitted to slurm!
+
+
+## Other output
+- /malt: hops_test_reads.rma6
+- /maltExtract: empty directory
